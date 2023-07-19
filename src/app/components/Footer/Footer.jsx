@@ -1,32 +1,39 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer
       id="contato"
-      className="flex items-end bg-[#1f2937] font-sans font-medium"
+      className="flex items-end bg-[#1f2937] font-sans font-normal"
     >
-      <div className="mt-4 w-full font-sans text-[#3d717a] ">
+      <div className="mt-4 w-full font-sans text-white ">
         <div className="md:flex-no-wrap container mx-auto flex ">
           <div className="mx-auto flex-shrink-0  ">
-            <a className=" flex items-center justify-center text-gray-900 ">
+            <Link
+              className="flex items-center justify-center text-gray-900"
+              href="/"
+              aria-label="Voltar para o início"
+            >
               <Image
                 src={"/images/Cristian_cyberpunk_8k-Dois.png"}
-                alt="link para a home com imagem"
+                alt="imagem do menu"
                 width={32}
                 height={32}
                 className="h-8 w-8 rounded-full"
               />
-            </a>
-            <p className="mt-2 text-sm  text-[#3d717a]">Web Developer</p>
-
+            </Link>
+            <p className="mt-2 text-sm font-medium text-[#00d8ff]">
+              Web Developer
+            </p>
             <div className="mt-4">
-              <span className=" mt-2 inline-flex justify-center sm:ml-auto sm:mt-0 ">
+              <span className="mt-2 inline-flex justify-center sm:ml-auto sm:mt-0">
                 <a
-                  className="cursor-pointer text-[#3d717a] hover:text-gray-700"
+                  className="cursor-pointer hover:text-black"
                   href="https://www.facebook.com/profile.php?id=100022676791816"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Facebook"
                 >
                   <svg
                     fill="currentColor"
@@ -40,10 +47,11 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  className="ml-3 cursor-pointer text-[#3d717a] hover:text-gray-700"
+                  className="ml-3 cursor-pointer hover:text-black"
                   href="https://www.instagram.com/cristiangarci.a/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Instagram"
                 >
                   <svg
                     fill="none"
@@ -59,10 +67,11 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  className="ml-3 cursor-pointer text-[#3d717a] hover:text-gray-700"
+                  className="ml-3 cursor-pointer hover:text-black"
                   href="https://github.com/dev-garcia"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="GitHub"
                 >
                   <svg
                     stroke="currentColor"
@@ -76,10 +85,11 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  className="ml-3 cursor-pointer text-[#3d717a] hover:text-gray-700"
+                  className="ml-3 cursor-pointer hover:text-black"
                   href="https://www.linkedin.com/in/cristian-garcia-web/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="LinkedIn"
                 >
                   <svg
                     fill="currentColor"
@@ -101,9 +111,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <div className="container mx-auto px-5 py-4">
-          <p className="md:  mb-32 mt-4 text-sm capitalize xl:text-center">
+          <p className="mt-4 text-sm capitalize md:mb-32 xl:text-center">
             © 2023 Cristian Garcia.
           </p>
         </div>
