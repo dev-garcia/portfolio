@@ -42,6 +42,31 @@ const Competencias = () => {
       role: "Linguagem de programação amplamente usada para desenvolvimento web.",
       imageUrl: "/images/js.svg",
     },
+    {
+      name: "TypeScript",
+      role: "Linguagem de programação que está crescendo no mercado e é recomendada para desenvolvimento web.",
+      imageUrl: "/images/typescript.svg",
+    },
+    {
+      name: "Python",
+      role: "Python é uma linguagem de programação de alto nível, dinâmica, interpretada, modular, multiplataforma e orientada a objetos",
+      imageUrl: "/images/python.svg",
+    },
+    {
+      name: "Sequelize",
+      role: "Sequelize é um ORM para Node.js que facilita a manipulação de dados em vários bancos de dados.",
+      imageUrl: "/images/sequelize.svg",
+    },
+    {
+      name: "MySQL",
+      role: "MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto, que suporta a linguagem SQL e é amplamente utilizado em aplicações web.",
+      imageUrl: "/images/mysql-um.svg",
+    },
+    {
+      name: "Express",
+      role: "Express é um framework de back-end popular para Node.js, que facilita a criação de back-ends escaláveis, robustos e de alto desempenho",
+      imageUrl: "/images/express-um.svg",
+    },
   ];
 
   const softSkills = [
@@ -83,16 +108,16 @@ const Competencias = () => {
           Competências
         </h2>
         <div className="bg-white py-24 sm:py-32">
+          <div className="max-w-2xl text-center m-auto">
+            <h3 className="text-2xl font-bold tracking-tight">Hard Skills</h3>
+            <p className="mt-6 mb-6 text-lg leading-8 text-gray-600">
+              Algumas das hardSkills que tenho experiência em projetos.
+            </p>
+          </div>
           <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-            <div className="max-w-2xl">
-              <h3 className="text-2xl font-bold tracking-tight">Hard Skills</h3>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Algumas das hardSkills que tenho experiência em projetos.
-              </p>
-            </div>
             <ul
               role="list"
-              className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+              className="grid gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-y-16 xl:col-span-3"
             >
               {hardSkills.map((person) => (
                 <li key={person.name}>
