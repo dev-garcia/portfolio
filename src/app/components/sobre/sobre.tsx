@@ -1,4 +1,4 @@
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 function CTA() {
   return (
@@ -7,7 +7,8 @@ function CTA() {
         href="/images/Currículo Cristian Garcia.pdf"
         download
         className="inline-block rounded bg-[#1f2937] px-6 pb-2 pt-2.5 text-xs font-medium uppercase text-white transition duration-150 ease-in-out
-         hover:bg-black">
+         hover:bg-black"
+      >
         Download CV
       </a>
     </div>
@@ -68,7 +69,8 @@ const Sobre = () => {
                 title="GitHub"
                 target="_blank"
                 className="flex rounded-full p-3 text-sm transition-all
-                  hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]">
+                  hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]"
+              >
                 <BsGithub /> <span className="pl-2">Meu GitHub</span>
               </a>
             </li>
@@ -82,7 +84,8 @@ const Sobre = () => {
                 title="LinkedIn"
                 target="_blank"
                 className="flex rounded-full p-3 text-sm transition-all
-                hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]">
+                hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]"
+              >
                 <BsLinkedin /> <span className="pl-2">Meu Linkedin</span>
               </a>
             </li>

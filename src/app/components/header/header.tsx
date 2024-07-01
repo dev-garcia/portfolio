@@ -1,8 +1,8 @@
 "use client";
 import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -37,14 +37,16 @@ const Header = () => {
                           href="/"
                           aria-label="Ir para a página de início"
                           title="início"
-                          className="text-white hover:text-[#00d8ff]">
+                          className="text-white hover:text-[#00d8ff]"
+                        >
                           Home
                         </Link>
                         <Link
                           href="/contato"
                           aria-label="Ir para a página de contato"
                           title="contato"
-                          className="text-white hover:text-[#00d8ff]">
+                          className="text-white hover:text-[#00d8ff]"
+                        >
                           Contato
                         </Link>
                       </div>
@@ -78,14 +80,16 @@ const Header = () => {
                     href="/"
                     aria-label="Ir para a página de início"
                     title="início"
-                    className="p-4 text-white hover:text-[#00d8ff]">
+                    className="p-4 text-white hover:text-[#00d8ff]"
+                  >
                     Home
                   </Link>
                   <Link
                     href="/contato"
                     aria-label="Ir para a página de contato"
                     title="contato"
-                    className="text-white hover:text-[#00d8ff]">
+                    className="text-white hover:text-[#00d8ff]"
+                  >
                     Contato
                   </Link>
                 </div>

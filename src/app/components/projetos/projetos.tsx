@@ -44,7 +44,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={repoLink}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center font-semibold text-[#AD004E] hover:text-black md:mb-2 lg:mb-0">
+              className="inline-flex items-center font-semibold text-[#AD004E] hover:text-black md:mb-2 lg:mb-0"
+            >
               leve-me ao repositório.
             </a>
           </p>
@@ -59,7 +60,8 @@ const Projetos: React.FC = () => {
     <>
       <section
         id="projetos"
-        className="text-blueGray-700 mt-20 bg-white font-sans">
+        className="text-blueGray-700 mt-20 bg-white font-sans"
+      >
         <h2 className="pt-8 text-3xl font-bold tracking-tight sm:text-4xl">
           Projetos
         </h2>

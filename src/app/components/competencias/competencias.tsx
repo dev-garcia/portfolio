@@ -117,7 +117,8 @@ const Competencias = () => {
           <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
             <ul
               role="list"
-              className="grid gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+              className="grid gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-y-16 xl:col-span-3"
+            >
               {hardSkills.map((person) => (
                 <li key={person.name}>
                   <div className="flex items-center gap-x-6">
@@ -155,7 +156,8 @@ const Competencias = () => {
               {softSkills.map((feature) => (
                 <div
                   key={feature.name}
-                  className="border-t border-gray-200 pt-4">
+                  className="border-t border-gray-200 pt-4"
+                >
                   <dt className="font-medium">{feature.name}</dt>
                   <dd className="mt-2 text-sm text-gray-500">
                     {feature.description}
