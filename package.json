@@ -1,5 +1,15 @@
 {
   "name": "portfolio-cristian-garcia",
+  "author": {
+    "name": "dev-garcia",
+    "email": "garcia.ac.cristian@gmail.com",
+    "url": "https://github.com/dev-garcia"
+  },
+  "description": "Portfolio do desenvolvedor Cristian Garcia, que pode ser encontrado com o usuário 'dev-garcia' no GitHub.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-garcia/portfolio.git"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
