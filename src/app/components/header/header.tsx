@@ -86,7 +86,7 @@ const Header = () => {
                     href="/"
                     aria-label="Ir para a página de início"
                     title="início"
-                    className="p-4 text-white hover:text-[#00d8ff]"
+                    className="p-4 text-white hover:text-azulPiscina"
                   >
                     Home
                   </Link>
@@ -94,7 +94,7 @@ const Header = () => {
                     href="/contato"
                     aria-label="Ir para a página de contato"
                     title="contato"
-                    className="text-white hover:text-[#00d8ff]"
+                    className="text-white hover:text-azulPiscina"
                   >
                     Contato
                   </Link>

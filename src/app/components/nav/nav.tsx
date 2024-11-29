@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { BiBook, BiCodeAlt, BiMessageSquareDetail } from "react-icons/bi";
+import { BiCodeAlt, BiMessageSquareDetail } from "react-icons/bi";
 import "./nav.css";
 
 const Nav = () => {
@@ -27,15 +27,6 @@ const Nav = () => {
           className={activeNav === "#sobre" ? "active" : ""}
         >
           <AiOutlineUser />
-        </a>
-        <a
-          href="#competencias"
-          onClick={() => setActiveNav("#competencias")}
-          title="Competências"
-          aria-label="Ir para a seção de competências"
-          className={activeNav === "#competencias" ? "active" : ""}
-        >
-          <BiBook />
         </a>
         <a
           href="#projetos"

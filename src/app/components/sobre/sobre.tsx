@@ -1,13 +1,22 @@
+"use client";
+
+import { Tab } from "@headlessui/react";
+import Image from "next/image";
+import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { competenciasList } from "../../data/competenciasData";
+import { experienciasList } from "../../data/experienciasData";
+import { formacoesList } from "../../data/formacoesData";
+import ExperienceCard from "../ExperienceCard";
+import Competencias from "../competencias/competencias";
 
 function CTA() {
   return (
-    <div className=" ">
+    <div>
       <a
         href="/images/Currículo Cristian Garcia.pdf"
         download
-        className="inline-block rounded bg-[#1f2937] px-6 pb-2 pt-2.5 text-xs font-medium uppercase text-white transition duration-150 ease-in-out
-         hover:bg-black"
+        className="inline-block rounded bg-[#1f2937] px-6 pb-2 pt-2.5 text-xs font-medium uppercase text-white transition duration-150 ease-in-out hover:bg-black"
       >
         Download CV
       </a>
@@ -15,10 +24,20 @@ function CTA() {
   );
 }
 
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Sobre = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const nonTechExperiencias = experienciasList.filter(
+    (experiencia) => !experiencia.isTech,
+  );
+
   return (
     <>
-      <section id="sobre" className="bubbles font-sans lg:min-h-screen">
+      <section id="sobre" className="bubbles py-10 lg:min-h-screen">
         <div className="bubble"></div>
         <div className="bubble"></div>
         <div className="bubble"></div>
@@ -34,62 +53,163 @@ const Sobre = () => {
         <div className="bubble"></div>
         <div className="bubble"></div>
 
-        <div className="flex flex-col justify-center pt-12 sm:flex-row sm:pt-4">
-          <div className="ml-4 flex flex-col sm:gap-1 md:gap-2">
-            <h1 className="text-left text-4xl font-bold sm:text-center lg:mt-20 ">
-              Bem vindo, Eu sou Cristian Garcia.
-              <p className="gradient-text text-left text-5xl drop-shadow-lg lg:text-9xl">
-                Desenvolvedor Web
-              </p>
-            </h1>
-          </div>
-        </div>
+        <div className="container mx-auto px-6">
+          <div className="text-center">
+            <Image
+              src="/images/Cristian_cyberpunk_8k-Dois.png"
+              alt="Cristian Garcia"
+              width={128}
+              height={128}
+              className="rounded-full mx-auto"
+            />
+            <h1 className="text-4xl font-bold mt-4">Cristian Garcia Maia</h1>
+            <p className="mt-2 text-lg text-gray-600">
+              Analista e Desenvolvedor de Sistemas
+            </p>
+            <p className="mt-4 max-w-2xl mx-auto text-center text-gray-700">
+              Profissional focado e adaptável, com facilidade para trabalhar em
+              equipe e flexibilidade para mudanças. Graduado em Análise e
+              Desenvolvimento de Sistemas, atuo em uma start-up que oferece
+              soluções sustentáveis para o ciclo de resíduos, onde tenho minha
+              primeira experiência híbrida na área de tecnologia. Busco sempre
+              evoluir tecnicamente e me tornar um profissional cada vez mais
+              completo.
+            </p>
 
-        <div className="m-auto p-4 text-left md:p-10">
-          <p className="m-auto w-11/12 text-left md:w-2/4">
-            Sou de uma pequena cidade do interior do Acre, onde as pessoas não
-            tinham um bom contato com tecnologia e incentivo de inovações
-            tecnológicas, com isso, decidi mudar para a capital Manaus - AM,
-            para ter novas experiências e oportunidades.
-            <br />
-            Adquiri experiências valiosas de liderança, onde liderei uma equipe
-            de desenvolvedores, mas nunca parei de codificar. Estou confiante de
-            que posso ser um ativo valioso para a sua empresa. Estou ansioso
-            para aprender mais sobre o seu negócio e as oportunidades que você
-            tem disponíveis.
-          </p>
-        </div>
-
-        <div>
-          <ul className="flex justify-center space-x-1 font-medium drop-shadow md:space-x-3 md:text-2xl">
-            <li>
+            <div className="mt-6 flex justify-center space-x-4">
               <a
                 href="https://github.com/dev-garcia"
-                rel="noopener noreferrer"
-                title="GitHub"
                 target="_blank"
-                className="flex rounded-full p-3 text-sm transition-all
-                  hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-700 hover:text-black"
               >
-                <BsGithub /> <span className="pl-2">Meu GitHub</span>
+                <BsGithub size={24} />
+                <span>GitHub</span>
               </a>
-            </li>
-            <li className="pl-4">
               <CTA />
-            </li>
-            <li className="pl-4">
               <a
                 href="https://www.linkedin.com/in/cristian-garcia-web/"
-                rel="noopener noreferrer"
-                title="LinkedIn"
                 target="_blank"
-                className="flex rounded-full p-3 text-sm transition-all
-                hover:scale-125 hover:bg-[#1f2937] hover:text-[#16e08f]"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-blue-700 hover:text-blue-900"
               >
-                <BsLinkedin /> <span className="pl-2">Meu Linkedin</span>
+                <BsLinkedin size={24} />
+                <span>LinkedIn</span>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 w-full max-w-2xl mx-auto">
+            <Tab.Group>
+              <Tab.List className="flex space-x-4 border-b border-gray-200">
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      "py-2 px-4 text-sm font-medium",
+                      selected
+                        ? "border-b-2 border-azulPiscina text-vermelho"
+                        : "text-gray-600 hover:text-vermelho",
+                    )
+                  }
+                >
+                  Experiências
+                </Tab>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      "py-2 px-4 text-sm font-medium",
+                      selected
+                        ? "border-b-2 border-azulPiscina text-vermelho"
+                        : "text-gray-600 hover:text-vermelho",
+                    )
+                  }
+                >
+                  Formações
+                </Tab>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      "py-2 px-4 text-sm font-medium",
+                      selected
+                        ? "border-b-2 border-azulPiscina text-vermelho"
+                        : "text-gray-600 hover:text-vermelho",
+                    )
+                  }
+                >
+                  Competências
+                </Tab>
+              </Tab.List>
+              <Tab.Panels className="mt-6">
+                <Tab.Panel>
+                  <ul className="space-y-4">
+                    {experienciasList
+                      .filter((experiencia) => experiencia.isTech)
+                      .map((experiencia) => (
+                        <ExperienceCard
+                          key={experiencia.id}
+                          experiencia={experiencia}
+                          todasCompetencias={competenciasList}
+                        />
+                      ))}
+                  </ul>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="mt-4 text-verdeAzulado underline"
+                  >
+                    Ver mais experiências
+                  </button>
+
+                  {/* Modal para Mais Experiências Profissionais Não Técnicas */}
+                  {isModalOpen && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                      <div className="bg-white rounded-lg p-6 w-11/12 max-w-2xl overflow-y-auto max-h-full">
+                        <h3 className="text-xl font-semibold mb-4">
+                          Experiências Profissionais Não Técnicas
+                        </h3>
+                        <ul className="space-y-4">
+                          {nonTechExperiencias.map((experiencia) => (
+                            <li key={experiencia.id} className="border-b pb-4">
+                              <strong className="text-lg">
+                                {experiencia.title}
+                              </strong>
+                              <p className="text-gray-600">
+                                {experiencia.period}
+                              </p>
+                              <p className="mt-2 text-gray-700">
+                                {experiencia.description}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                        <button
+                          onClick={() => setIsModalOpen(false)}
+                          className="mt-6 bg-verdeAzulado text-white px-4 py-2 rounded hover:bg-bg"
+                        >
+                          Fechar
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </Tab.Panel>
+                <Tab.Panel>
+                  <ul className="space-y-4">
+                    {formacoesList.map((formacao) => (
+                      <li key={formacao.id} className="border-b pb-4">
+                        <strong className="text-lg">{formacao.titulo}</strong>
+                        <p className="text-gray-600">{formacao.periodo}</p>
+                        <p className="mt-2 text-gray-700">
+                          {formacao.descricao}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </Tab.Panel>
+                <Tab.Panel>
+                  <Competencias competencias={competenciasList} />
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
         </div>
       </section>
     </>

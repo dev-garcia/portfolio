@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
         <div className="flex flex-col justify-center lg:flex-row">
-          <button className="focus:shadow-outline mt-auto flex items-center rounded-lg bg-[#3d717a] px-6 py-2 font-semibold text-white ring-offset-2 ring-offset-current transition duration-500 ease-in-out hover:bg-[#1f2937] focus:outline-none focus:ring-2">
+          <button className="focus:shadow-outline mt-auto flex items-center rounded-lg bg-verdeAzulado px-6 py-2 font-semibold text-white ring-offset-2 ring-offset-current transition duration-500 ease-in-out hover:bg-bg focus:outline-none focus:ring-2">
             <a href={projectLink} target="_blank" rel="noreferrer noopener">
               Acessar
             </a>
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={repoLink}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center font-semibold text-[#AD004E] hover:text-black md:mb-2 lg:mb-0"
+              className="inline-flex items-center font-semibold text-ameixa hover:text-black md:mb-2 lg:mb-0"
             >
               leve-me ao repositório.
             </a>
