@@ -8,29 +8,8 @@
   --color-verde-brilhante: #16e08f;
   --color-vermelho: #e45250;
   --color-ameixa: #ad004e;
-  --color-teste-UM: #0088ff;
   --color-bg: #1f2937;
   --color-white: #ffffff;
-}
-
-.text-color-azul-piscina {
-  color: var(--color-azul-piscina);
-}
-
-.text-color-verde-azulado {
-  color: var(--color-verde-azulado);
-}
-
-.text-color-vermelho {
-  color: var(--color-vermelho);
-}
-
-.text-color-ameixa {
-  color: var(--color-ameixa);
-}
-
-.text-dark {
-  color: var(--color-bg);
 }
 
 html {
@@ -54,7 +33,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Bolhas para a secao sobre */
+/* Bolhas */
 
 .bubbles {
   position: relative;

@@ -19,7 +19,7 @@ nav a {
   padding: 0.9rem;
   border-radius: 50%;
   display: flex;
-  color: var(--color-light);
+  color: var(--color-white);
   font-size: 1.1rem;
 }
 
