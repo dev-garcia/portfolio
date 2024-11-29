@@ -1,6 +1,12 @@
 "use client";
-import { Disclosure, Menu } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+} from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +21,7 @@ const Header = () => {
                 <div className="relative flex h-16 items-center justify-between">
                   <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     {/* Mobile menu button*/}
-                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <XMarkIcon
@@ -28,7 +34,7 @@ const Header = () => {
                           aria-hidden="true"
                         />
                       )}
-                    </Disclosure.Button>
+                    </DisclosureButton>
                   </div>
                   <div className=" flex flex-1 items-center justify-center font-bold sm:items-stretch sm:justify-start">
                     <div className="hidden sm:ml-6 sm:block">
@@ -56,7 +62,7 @@ const Header = () => {
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-3">
                       <div>
-                        <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <MenuButton className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                           <span className="sr-only">Open user menu</span>
                           <Link href="/" aria-label="Voltar para o início">
                             <Image
@@ -67,14 +73,14 @@ const Header = () => {
                               className="h-8 w-8 rounded-full"
                             />
                           </Link>
-                        </Menu.Button>
+                        </MenuButton>
                       </div>
                     </Menu>
                   </div>
                 </div>
               </div>
 
-              <Disclosure.Panel className="sm:hidden">
+              <DisclosurePanel className="sm:hidden">
                 <div className="space-y-1 px-12 pb-3 pt-2 font-bold">
                   <Link
                     href="/"
@@ -93,7 +99,7 @@ const Header = () => {
                     Contato
                   </Link>
                 </div>
-              </Disclosure.Panel>
+              </DisclosurePanel>
             </>
           )}
         </Disclosure>
