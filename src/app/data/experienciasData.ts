@@ -1,4 +1,4 @@
-export interface Experiencia {
+export interface ExperienciaType {
   id: string;
   title: string;
   period: string;
@@ -7,7 +7,7 @@ export interface Experiencia {
   isTech: boolean;
 }
 
-export const experienciasList: Experiencia[] = [
+export const experienciasList: ExperienciaType[] = [
   {
     id: "residuum-fullstack",
     title: "Residuum - Desenvolvedor Full Stack",
@@ -62,20 +62,14 @@ export const experienciasList: Experiencia[] = [
     period: "08/2020 – 01/2023",
     description:
       "Iniciei minha trajetória na filial 298 como operador de caixa, onde desenvolvi habilidades essenciais em atendimento ao cliente e gestão de operações financeiras. Posteriormente, fui promovido a uma posição de liderança na filial 368. Nessa função, gerenciei a equipe administrativa, treinando novos colaboradores e garantindo a eficiência dos processos internos. Fui responsável pela liberação de orçamentos e pela execução de diversas atividades administrativas, contribuindo significativamente para o bom funcionamento da filial.",
-    competenciasIds: [
-      "lideranca",
-      "administracao",
-      "trabalho-em-equipe",
-      "atendimento",
-    ],
+    competenciasIds: ["lideranca", "administracao", "trabalho-em-equipe", "atendimento"],
     isTech: false,
   },
   {
     id: "pastejo-operador",
     title: "Pastejo – Operador de Cadastro",
     period: "01/11/2019 - 19/07/2020",
-    description:
-      "Coleta de documentos e organização de relatórios para financiamento rural.",
+    description: "Coleta de documentos e organização de relatórios para financiamento rural.",
     competenciasIds: [
       "atendimento",
       "trabalho-em-equipe",

@@ -5,13 +5,10 @@ import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer
-      id="contato"
-      className="flex items-end bg-[#1f2937] font-sans font-normal"
-    >
-      <div className="mt-4 w-full font-sans text-white ">
-        <div className="md:flex-no-wrap container mx-auto flex ">
-          <div className="mx-auto flex-shrink-0">
+    <footer id="contato" className="flex items-end bg-[#1f2937] font-normal font-sans">
+      <div className="mt-4 w-full font-sans text-white">
+        <div className="container mx-auto flex md:flex-no-wrap">
+          <div className="mx-auto shrink-0">
             <Link
               className="flex items-center justify-center"
               href="/"
@@ -25,11 +22,9 @@ const Footer = () => {
                 className="h-8 w-8 rounded-full"
               />
             </Link>
-            <p className="mt-2 text-sm font-medium text-[#00d8ff]">
-              Web Developer
-            </p>
+            <p className="mt-2 font-medium text-[#00d8ff] text-sm">Web Developer</p>
             <div className="mt-4">
-              <span className="mt-2 inline-flex justify-center sm:ml-auto sm:mt-0">
+              <span className="mt-2 inline-flex justify-center sm:mt-0 sm:ml-auto">
                 <a
                   className="ml-3 cursor-pointer hover:text-black"
                   href="https://github.com/dev-garcia"
@@ -74,9 +69,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="container mx-auto px-5 py-4">
-          <p className="mt-4 text-sm capitalize md:mb-32 xl:text-center">
-            © 2024 Cristian Garcia.
-          </p>
+          <p className="mt-4 text-sm capitalize md:mb-32 xl:text-center">© 2024 Cristian Garcia.</p>
         </div>
       </div>
     </footer>

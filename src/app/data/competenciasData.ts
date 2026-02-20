@@ -1,4 +1,4 @@
-export interface Competencia {
+export interface CompetenciaType {
   id: string;
   name: string;
   description: string;
@@ -6,7 +6,7 @@ export interface Competencia {
   isTech: boolean;
 }
 
-export const competenciasList: Competencia[] = [
+export const competenciasList: CompetenciaType[] = [
   {
     id: "nodejs",
     name: "Node.js",
@@ -17,16 +17,14 @@ export const competenciasList: Competencia[] = [
   {
     id: "react",
     name: "React",
-    description:
-      "Biblioteca JavaScript para construção de interfaces de usuário.",
+    description: "Biblioteca JavaScript para construção de interfaces de usuário.",
     logo: "/images/react.svg",
     isTech: true,
   },
   {
     id: "nestjs",
     name: "NestJS",
-    description:
-      "Framework para construção de aplicações escaláveis em Node.js.",
+    description: "Framework para construção de aplicações escaláveis em Node.js.",
     logo: "/images/nestjs.svg",
     isTech: true,
   },
@@ -76,8 +74,7 @@ export const competenciasList: Competencia[] = [
   {
     id: "typescript",
     name: "TypeScript",
-    description:
-      "Superset de JavaScript que adiciona tipagem estática ao código.",
+    description: "Superset de JavaScript que adiciona tipagem estática ao código.",
     logo: "/images/typescript.svg",
     isTech: true,
   },
@@ -140,8 +137,7 @@ export const competenciasList: Competencia[] = [
   {
     id: "miro",
     name: "Miro",
-    description:
-      "Ferramenta colaborativa online para planejamento e brainstorming.",
+    description: "Ferramenta colaborativa online para planejamento e brainstorming.",
     logo: "/images/miro-svgrepo-com.svg",
     isTech: true,
   },

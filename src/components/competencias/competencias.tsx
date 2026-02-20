@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Competencia } from "../../data/competenciasData";
+import type { CompetenciaType } from "@/app/data/competenciasData";
 
 interface CompetenciasProps {
-  competencias: Competencia[];
+  competencias: CompetenciaType[];
 }
 
 const Competencias: React.FC<CompetenciasProps> = ({ competencias }) => {
@@ -17,19 +17,19 @@ const Competencias: React.FC<CompetenciasProps> = ({ competencias }) => {
       acc[category].push(competencia);
       return acc;
     },
-    {} as Record<string, Competencia[]>,
+    {} as Record<string, CompetenciaType[]>,
   );
 
   return (
     <div className="space-y-6">
       {Object.entries(groupedCompetencias).map(([category, comps]) => (
         <div key={category}>
-          <h3 className="text-xl font-semibold mb-4">{category}</h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 sm:p-4">
+          <h3 className="mb-4 font-semibold text-xl">{category}</h3>
+          <div className="grid grid-cols-1 gap-4 p-2 sm:grid-cols-2 sm:p-4 md:grid-cols-3 lg:grid-cols-4">
             {comps.map((competencia) => (
               <div
                 key={competencia.id}
-                className="flex flex-col items-center text-center p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="flex flex-col items-center rounded-lg border p-4 text-center shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
                 {competencia.logo && (
                   <Image
@@ -40,12 +40,8 @@ const Competencias: React.FC<CompetenciasProps> = ({ competencias }) => {
                     className="mb-3"
                   />
                 )}
-                <h4 className="font-semibold text-lg mb-2">
-                  {competencia.name}
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  {competencia.description}
-                </p>
+                <h4 className="mb-2 font-semibold text-lg">{competencia.name}</h4>
+                <p className="text-gray-600 text-sm">{competencia.description}</p>
               </div>
             ))}
           </div>

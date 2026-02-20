@@ -1,24 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Competencia } from "../data/competenciasData";
-import { Experiencia } from "../data/experienciasData";
+import type { CompetenciaType } from "@/app/data/competenciasData";
+import type { ExperienciaType } from "@/app/data/experienciasData";
 import Competencias from "./competencias/competencias";
 
 interface ExperienceCardProps {
-  experiencia: Experiencia;
-  todasCompetencias: Competencia[];
+  experiencia: ExperienciaType;
+  todasCompetencias: CompetenciaType[];
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
-  experiencia,
-  todasCompetencias,
-}) => {
-  const [currentCompetencias, setCurrentCompetencias] = useState<
-    Competencia[] | null
-  >(null);
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experiencia, todasCompetencias }) => {
+  const [currentCompetencias, setCurrentCompetencias] = useState<CompetenciaType[] | null>(null);
 
-  const abrirCompetencias = (competencias: Competencia[]) => {
+  const abrirCompetencias = (competencias: CompetenciaType[]) => {
     setCurrentCompetencias(competencias);
   };
 
@@ -31,8 +26,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   );
 
   return (
-    <li className="border rounded-lg p-4 shadow hover:shadow-lg transition-shadow duration-300">
-      <div className="flex justify-between items-center">
+    <li className="rounded-lg border p-4 shadow transition-shadow duration-300 hover:shadow-lg">
+      <div className="flex items-center justify-between">
         <div>
           <strong className="text-lg">{experiencia.title}</strong>
           <p className="text-gray-600">{experiencia.period}</p>
@@ -50,20 +45,18 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
       {/* Modal para Competências */}
       {currentCompetencias && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg p-4 w-full h-full sm:p-6 sm:w-11/12 sm:max-w-3xl sm:max-h-5/6 overflow-y-auto relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="relative h-full w-full overflow-y-auto rounded-lg bg-white p-4 sm:max-h-5/6 sm:w-11/12 sm:max-w-3xl sm:p-6">
             <button
               onClick={fecharCompetencias}
-              className="absolute top-4 right-4 bg-verdeAzulado text-white p-2 rounded-full hover:bg-vermelho focus:outline-none"
+              className="absolute top-4 right-4 rounded-full bg-verdeAzulado p-2 text-white hover:bg-vermelho focus:outline-none"
               aria-label="Fechar modal"
             >
               &times;
             </button>
 
-            {/* Título do Modal */}
-            <h2 className="text-2xl font-semibold mb-4">Competências</h2>
+            <h2 className="mb-4 font-semibold text-2xl">Competências</h2>
 
-            {/* Componente Competências */}
             <Competencias competencias={currentCompetencias} />
           </div>
         </div>

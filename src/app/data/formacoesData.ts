@@ -9,11 +9,9 @@ export interface Formacao {
 export const formacoesList: Formacao[] = [
   {
     id: "web-academy",
-    titulo:
-      "Capacitação de Desenvolvimento Web Full Stack - Web Academy – UFAM / MOTOROLA",
+    titulo: "Capacitação de Desenvolvimento Web Full Stack - Web Academy – UFAM / MOTOROLA",
     periodo: "2021 – 2022",
-    descricao:
-      "Curso intensivo focado em desenvolvimento web full stack com diversas tecnologias.",
+    descricao: "Curso intensivo focado em desenvolvimento web full stack com diversas tecnologias.",
     competenciasIds: [
       "desenvolvimento-web-fullstack",
       "html5",

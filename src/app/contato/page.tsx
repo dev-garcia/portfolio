@@ -1,10 +1,11 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTelegram, FaWhatsapp } from "react-icons/fa";
-import Header from "../components/header/header";
+import Header from "@/components/header/header";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
@@ -63,12 +64,9 @@ export default function Contato() {
 
         <div className="section-contato px-6 py-16 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Entre em Contato
-            </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Fique à vontade para entrar em contato através das plataformas
-              abaixo:
+            <h2 className="font-bold text-3xl tracking-tight sm:text-4xl">Entre em Contato</h2>
+            <p className="mt-2 text-gray-600 text-lg leading-8">
+              Fique à vontade para entrar em contato através das plataformas abaixo:
             </p>
             <div className="mt-6 flex justify-center space-x-4">
               <a
@@ -95,20 +93,14 @@ export default function Contato() {
 
         <div className="section-contato px-6 lg:px-8">
           <div className="mx-auto text-center">
-            <p className="text-lg leading-8 text-gray-600">
+            <p className="text-gray-600 text-lg leading-8">
               Ou envie um email, os dados não são obrigatórios!
             </p>
           </div>
-          <form
-            onSubmit={handleSubmit}
-            className="mx-auto mt-4 max-w-xl sm:my-8"
-          >
+          <form onSubmit={handleSubmit} className="mx-auto mt-4 max-w-xl sm:my-8">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label
-                  htmlFor="first-name"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="first-name" className="block font-semibold text-sm leading-6">
                   Nome
                 </label>
                 <div className="mt-2.5">
@@ -117,16 +109,13 @@ export default function Contato() {
                     name="firstName"
                     id="first-name"
                     autoComplete="given-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     onChange={handleChange}
                   />
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="last-name"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="last-name" className="block font-semibold text-sm leading-6">
                   Sobrenome
                 </label>
                 <div className="mt-2.5">
@@ -135,16 +124,13 @@ export default function Contato() {
                     name="lastName"
                     id="last-name"
                     autoComplete="family-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     onChange={handleChange}
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label
-                  htmlFor="company"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="company" className="block font-semibold text-sm leading-6">
                   Empresa
                 </label>
                 <div className="mt-2.5">
@@ -153,16 +139,13 @@ export default function Contato() {
                     name="company"
                     id="company"
                     autoComplete="organization"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     onChange={handleChange}
                   />
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="email" className="block font-semibold text-sm leading-6">
                   Seu principal Email
                 </label>
                 <div className="mt-2.5">
@@ -171,16 +154,13 @@ export default function Contato() {
                     name="email"
                     id="email"
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     onChange={handleChange}
                   />
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="phone-number"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="phone-number" className="block font-semibold text-sm leading-6">
                   Seu número
                 </label>{" "}
                 <div className="relative mt-2.5">
@@ -191,7 +171,7 @@ export default function Contato() {
                     <select
                       id="country"
                       name="country"
-                      className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm"
+                      className="h-full rounded-md border-0 bg-none bg-transparent py-0 pr-9 pl-4 text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm"
                     >
                       <option>BR</option>
                       <option>US</option>
@@ -202,16 +182,13 @@ export default function Contato() {
                     name="phoneNumber"
                     id="phone-number"
                     autoComplete="tel"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 pl-24 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 pl-24 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     onChange={handleChange}
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold leading-6"
-                >
+                <label htmlFor="message" className="block font-semibold text-sm leading-6">
                   Mensagem
                 </label>
                 <div className="mt-2.5">
@@ -219,7 +196,7 @@ export default function Contato() {
                     name="message"
                     id="message"
                     rows={4}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     defaultValue={""}
                     onChange={handleChange}
                   />
@@ -229,7 +206,7 @@ export default function Contato() {
             <div className="mt-10">
               <button
                 type="submit"
-                className="block w-full rounded-md bg-[#1f2937]  px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="block w-full rounded-md bg-[#1f2937] px-3.5 py-2.5 text-center font-semibold text-sm text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Enviar
               </button>
@@ -238,12 +215,12 @@ export default function Contato() {
         </div>
       </section>
 
-      <footer className="flex items-end bg-[#1f2937] font-sans font-normal">
-        <div className="mt-4 w-full font-sans text-white ">
-          <div className="md:flex-no-wrap container mx-auto flex ">
-            <div className="mx-auto flex-shrink-0">
+      <footer className="flex items-end bg-[#1f2937] font-normal font-sans">
+        <div className="mt-4 w-full font-sans text-white">
+          <div className="container mx-auto flex md:flex-no-wrap">
+            <div className="mx-auto shrink-0">
               <Link
-                className="flex items-center justify-center  "
+                className="flex items-center justify-center"
                 href="/"
                 aria-label="Voltar para o início"
               >
@@ -255,11 +232,9 @@ export default function Contato() {
                   className="h-8 w-8 rounded-full"
                 />
               </Link>
-              <p className="mt-2 text-sm font-medium text-[#00d8ff]">
-                Web Developer
-              </p>
+              <p className="mt-2 font-medium text-[#00d8ff] text-sm">Web Developer</p>
               <div className="mt-4">
-                <span className="mt-2 inline-flex justify-center sm:ml-auto sm:mt-0">
+                <span className="mt-2 inline-flex justify-center sm:mt-0 sm:ml-auto">
                   <a
                     className="ml-3 cursor-pointer hover:text-black"
                     href="https://github.com/dev-garcia"
