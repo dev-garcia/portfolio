@@ -14,7 +14,7 @@ function CTA() {
   return (
     <div>
       <a
-        href="/images/Currículo Cristian Garcia.pdf"
+        href="/images/curriculo_Cristian_Garcia_Maia.pdf"
         download
         className="inline-block rounded bg-[#1f2937] px-6 pt-2.5 pb-2 font-medium text-white text-xs uppercase transition duration-150 ease-in-out hover:bg-black"
       >

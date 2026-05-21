@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { CompetenciaType } from "@/app/data/competenciasData";
 
 interface CompetenciasProps {
@@ -26,24 +25,27 @@ const Competencias: React.FC<CompetenciasProps> = ({ competencias }) => {
         <div key={category}>
           <h3 className="mb-4 font-semibold text-xl">{category}</h3>
           <div className="grid grid-cols-1 gap-4 p-2 sm:grid-cols-2 sm:p-4 md:grid-cols-3 lg:grid-cols-4">
-            {comps.map((competencia) => (
-              <div
-                key={competencia.id}
-                className="flex flex-col items-center rounded-lg border p-4 text-center shadow-sm transition-shadow duration-300 hover:shadow-md"
-              >
-                {competencia.logo && (
-                  <Image
-                    src={competencia.logo}
-                    alt={`${competencia.name} logo`}
-                    width={40}
-                    height={40}
-                    className="mb-3"
-                  />
-                )}
-                <h4 className="mb-2 font-semibold text-lg">{competencia.name}</h4>
-                <p className="text-gray-600 text-sm">{competencia.description}</p>
-              </div>
-            ))}
+            {comps.map((competencia) => {
+              const Icon = competencia.icon;
+              return (
+                <div
+                  key={competencia.id}
+                  className="
+                    flex flex-col items-center rounded-lg border p-4
+                    text-center shadow-sm transition-all duration-300
+                    hover:-translate-y-1 hover:shadow-md
+                  "
+                >
+                  {Icon && (
+                    <div className="mb-3">
+                      <Icon size={40} />
+                    </div>
+                  )}
+                  <h4 className="mb-2 font-semibold text-lg">{competencia.name}</h4>
+                  <p className="text-gray-600 text-sm">{competencia.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}
