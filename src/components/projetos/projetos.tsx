@@ -66,14 +66,6 @@ const Projetos: React.FC = () => {
       />
 
       <ProjectCard
-        title="Ref-Color"
-        description="Neste projeto disponibilizei as paletas usadas por algumas das marcas mais conhecidas globalmente."
-        imageSrc="/images/ref-color.png"
-        projectLink="https://ref-color-dev-garcia.vercel.app/"
-        repoLink="https://github.com/dev-garcia/Ref-Color"
-      />
-
-      <ProjectCard
         title="Saúde em Números"
         description="Neste projeto disponibilizei a calculadora ICM e uma para brincar com a idade."
         imageSrc="/images/saude-em-numeros.png"
