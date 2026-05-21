@@ -1,8 +1,32 @@
+import type { IconType } from "react-icons";
+import { GrOracle } from "react-icons/gr";
+import { FaAws, FaFileExcel, FaFileWord } from "react-icons/fa6";
+import {
+  SiNodedotjs,
+  SiReact,
+  SiNestjs,
+  SiPrisma,
+  SiMysql,
+  SiNextdotjs,
+  SiScrumalliance,
+  SiTypescript,
+  SiDigitalocean,
+  SiTailwindcss,
+  SiMui,
+  SiExpress,
+  SiSequelize,
+  SiAngular,
+  SiBootstrap,
+  SiMiro,
+  SiFigma,
+} from "react-icons/si";
+import { FaLightbulb } from "react-icons/fa6";
+
 export interface CompetenciaType {
   id: string;
   name: string;
   description: string;
-  logo?: string;
+  icon?: IconType;
   isTech: boolean;
 }
 
@@ -11,141 +35,140 @@ export const competenciasList: CompetenciaType[] = [
     id: "nodejs",
     name: "Node.js",
     description: "Plataforma para construir aplicações do lado do servidor.",
-    logo: "/images/nodejs-logo.svg",
+    icon: SiNodedotjs,
     isTech: true,
   },
   {
     id: "react",
     name: "React",
     description: "Biblioteca JavaScript para construção de interfaces de usuário.",
-    logo: "/images/react.svg",
+    icon: SiReact,
     isTech: true,
   },
   {
     id: "nestjs",
     name: "NestJS",
     description: "Framework para construção de aplicações escaláveis em Node.js.",
-    logo: "/images/nestjs.svg",
+    icon: SiNestjs,
     isTech: true,
   },
   {
     id: "prisma",
     name: "Prisma",
     description: "ORM para Node.js e TypeScript.",
-    logo: "/images/prisma-svgrepo-com.svg",
-
+    icon: SiPrisma,
     isTech: true,
   },
   {
     id: "mysql",
     name: "MySQL",
     description: "Sistema de gerenciamento de banco de dados relacional.",
-    logo: "/images/mysql-um.svg",
+    icon: SiMysql,
     isTech: true,
   },
   {
     id: "amazon-rds",
     name: "Amazon RDS",
     description: "Serviço de banco de dados gerenciado pela AWS.",
-    logo: "/images/aws-svgrepo-com.svg",
+    icon: FaAws,
     isTech: true,
   },
   {
     id: "oracle",
     name: "Oracle",
     description: "Sistema de gerenciamento de banco de dados.",
-    logo: "/images/oracle-svgrepo-com.svg",
+    icon: GrOracle,
     isTech: true,
   },
   {
     id: "nextjs",
     name: "Next.js",
     description: "Framework React para renderização no lado do servidor.",
-    logo: "/images/next.svg",
+    icon: SiNextdotjs,
     isTech: true,
   },
   {
     id: "scrum",
     name: "Scrum",
     description: "Metodologia ágil para gestão e planejamento de projetos.",
-    logo: "/images/skill-scrum.svg",
+    icon: SiScrumalliance,
     isTech: true,
   },
   {
     id: "typescript",
     name: "TypeScript",
     description: "Superset de JavaScript que adiciona tipagem estática ao código.",
-    logo: "/images/typescript.svg",
+    icon: SiTypescript,
     isTech: true,
   },
   {
     id: "digital-ocean",
     name: "Digital Ocean",
     description: "Provedor de serviços de cloud computing.",
-    logo: "/images/digital-ocean.svg",
+    icon: SiDigitalocean,
     isTech: true,
   },
   {
     id: "tailwindcss",
     name: "Tailwind CSS",
     description: "Framework de CSS utilitário para estilização rápida.",
-    logo: "/images/tailwind-css.svg",
+    icon: SiTailwindcss,
     isTech: true,
   },
   {
     id: "mui",
     name: "MUI",
     description: "Biblioteca de componentes React.",
-    logo: "/images/mui.svg",
+    icon: SiMui,
     isTech: true,
   },
   {
     id: "expressjs",
     name: "Express.js",
     description: "Framework web minimalista para Node.js.",
-    logo: "/images/express-um.svg",
+    icon: SiExpress,
     isTech: true,
   },
   {
     id: "sequelize",
     name: "Sequelize.js",
     description: "ORM baseado em promessas para Node.js.",
-    logo: "/images/sequelize.svg",
+    icon: SiSequelize,
     isTech: true,
   },
   {
     id: "angular",
     name: "Angular",
     description: "Framework JavaScript para desenvolvimento de aplicações web.",
-    logo: "/images/angular-svgrepo-com.svg",
+    icon: SiAngular,
     isTech: true,
   },
   {
     id: "bootstrap",
     name: "Bootstrap",
     description: "Framework front-end para desenvolvimento web responsivo.",
-    logo: "/images/bootstrap.svg",
+    icon: SiBootstrap,
     isTech: true,
   },
   {
     id: "design-thinking",
     name: "Design Thinking",
     description: "Metodologia para solução de problemas e inovação.",
-    logo: "/images/design-thinking.svg",
+    icon: FaLightbulb,
     isTech: true,
   },
   {
     id: "miro",
     name: "Miro",
     description: "Ferramenta colaborativa online para planejamento e brainstorming.",
-    logo: "/images/miro-svgrepo-com.svg",
+    icon: SiMiro,
     isTech: true,
   },
   {
     id: "figma",
     name: "Figma",
     description: "Ferramenta de design gráfico baseada em navegador.",
-    logo: "/images/figma-svgrepo-com.svg",
+    icon: SiFigma,
     isTech: true,
   },
   {
