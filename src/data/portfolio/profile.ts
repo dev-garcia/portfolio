@@ -9,7 +9,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/cristian-garcia-web/",
     github: "https://github.com/dev-garcia",
     whatsapp: "https://api.whatsapp.com/send?phone=5592986032632",
-    product: "https://revalidabr.com",
+    product: "https://revalidate.com.br/",
   },
 };
 
